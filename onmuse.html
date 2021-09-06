@@ -1,0 +1,50 @@
+<html>
+ <head>
+ <title> Mouse Over and Mouse Out </title>
+ <style type="text/css">
+ #image1{ 
+    position:absolute; 
+    /*top:50px;
+    left:50px;
+    border:thin; */
+    visibility:visible; 
+    height:600px;
+    width:900px;
+    }
+#image2{
+    position:absolute;
+    /*top:50px; 
+    left:50px;
+    border:thin; */
+    visibility:hidden ;
+    height:600px;
+    width:900px;
+    }
+</style>
+
+<script >
+ function changeImage(){
+ var imageOne=document.getElementById("image1").style;
+var imageTwo=document.getElementById("image2").style;
+if(imageOne.visibility==="visible") {
+ imageOne.visibility="hidden";
+ imageTwo.visibility="visible"; }
+else
+{
+ imageOne.visibility="visible";
+ imageTwo.visibility="hidden"; }
+ }
+</script>
+
+
+</head>
+<body bgcolor="black" text=red>
+    <h1 align = center> Mouse Events </h1>
+    <hr>
+
+    <img src="857412176_176706.jpg" id="image1" onmouseover="changeImage()"
+    onMouseOut="changeImage()"></img> 
+    <img src="857412828_174691.jpg" id="image2" onmouseover="changeImage()"
+    onMouseOut="changeImage()"> </img>
+</body>
+</html>
